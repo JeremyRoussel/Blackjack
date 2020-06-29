@@ -1,54 +1,84 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <title>Blackjack Table</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Blackjack</title>
+        
+        <!-- Font Import -->
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet"> 
+        
+        <!-- Stylesheet -->
+        <link rel="stylesheet" href="css/table.css">
 
+        <!-- Icon -->
+        <link rel="icon" href="img/blue_back.jpg">
 
-    <!-- JS Link -->
-    <script defer src="js/blackjack.js"></script>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  </head>
-  <body>
+        <!-- Shuffler Script -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js"></script>
+
+    </head>
+    <body>
+
+        <div class="header">
+            <img src="img/title_cards.png" alt="Poker Logo" id="poker">
+            <h1>BLACKJACK</h1>
+        </div>
+
+        <div id="table">
+          <div id="messages">
+              <h2>Let's Play!</h2>
+          </div>
+
+          <label id="dealer-label">Dealer: </label>
+          <div id="dealer-hand" class="hand">
+              <!-- <img src="img/2C.jpg" alt="2 of clubs">
+              <img src="img/4D.jpg" alt="4 of diamonds"> -->
+
+          </div>
+
+          <label id="player-label">Player: </label>
+          <div id="player-hand" class="hand">
+
+          </div>
+
+          <div class="buttons">
+            <button id="deal-button" class="play">Deal</button>
+            <button id="hit-button" class="play">Hit</button>
+            <button id="stand-button" class="play">Stand</button>
+            <button id="reset-button" class="play">New Game</button>
+          </div>
+        </div>
+    <div class="betting">
+            <div class="bet-square">
+                <p>Bet </p>
+                <p id="bet">$0</p>
+            </div>
+            <div class="pot-square">
+                <p>Chips</p>
+                <p id="pot">$500</p>
+            </div>
+
+            <div class="chips">
+                <div id="five">
+                    <img src="img/chip-5.png" alt="Poker Chip 5 value" id="5">
+                </div>
+                <div id="ten">
+                    <img src="img/chip-10.png" alt="Poker Chip 10 value" id="10">
+                </div>
+                <div id="fifteen">
+                    <img src="img/chip-25.png" alt="Poker Chip 15 value" id="25">
+                </div>
+                <div id="fifty">
+                    <img src="img/chip-50.png" alt="Poker Chip 50 value" id="50">
+                </div>
+
+            </div>
+
+        </div>
+
+        <script src="js/blackjack.js"></script>
       
-    <div id="table">
+    </body>
 
-        <div id="messages"></div>
-        
-        <label>Dealer: </label>
-        
-        <label id="dealer-points" class="points"></label>
-        
-        <div id="dealer-hand" class="hand">
-        
-        </div>
-        
-        <label>Player: </label>
-        
-        <label id="player-points" class="points"></label>
-        
-        <div id="player-hand" class="hand">
-        
-        </div>
-        
-        <div class="buttons">
-        
-        <button id="deal-button">Deal</button>
-        
-        <button id="hit-button">Hit</button>
-        
-        <button id="stand-button">Stand</button>
-        
-        </div>
-        
-        </div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </body>
+
 </html>
